@@ -1,0 +1,25 @@
+.menu {
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 21px;
+        flex-wrap: wrap;
+        padding: 5px 0;
+
+
+        @include _768 {
+            display: none;
+        }
+    }
+
+    &_item {
+
+    }
+
+    &__link {
+        font-weight: 600;
+        color: $second-color;
+        line-height:  calc(24 / 14 * 100%);
+    }
+
+}

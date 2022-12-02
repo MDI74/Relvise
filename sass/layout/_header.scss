@@ -1,0 +1,90 @@
+@use "sass:math";
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+
+    &__menu {
+        padding: 0 5px;
+    }
+    
+    &__content {
+        display: flex;
+        align-items: center;
+        min-height: 104px;
+
+        @include _768 {
+           justify-content: space-between;
+        }
+    }
+
+    &__logo {
+        font-size: 24px;
+        color: inherit;
+        font-weight: 700;
+        margin-right: 133px;
+        z-index: 2;
+
+        @include _768 {
+            margin-right: unset;
+         }
+        
+    }
+}
+
+.header__burger{
+    display: none;
+    @include _768 {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 4;
+        order: 3;
+        padding: 0 5px;
+
+        & span {
+            position: absolute;
+            background-color: #4d4b4b;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            top: 9px;
+            transition: all 0.5s ease 0s;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            background: #4d4b4b;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            transition: all 0.5s ease 0s
+        }
+
+        &::before{
+            top: 0;
+        }
+        &::after{
+            bottom: 0;
+        }
+        &.active span{
+            transform: scale(0);
+        }
+        &.active:before{
+            transform: rotate(45deg);
+            top: 9px;
+        }
+        &.active:after{
+            transform: rotate(-45deg);
+            bottom: 9px;
+        }
+    }
+    
+}    
+
