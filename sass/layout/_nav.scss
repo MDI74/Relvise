@@ -8,7 +8,10 @@
 
 
         @include _768 {
-            display: none;
+           flex-direction: column;
+           align-items: flex-end;
+           padding: 25px 20px;
+           row-gap: 20px;
         }
     }
 
@@ -20,6 +23,15 @@
         font-weight: 600;
         color: $second-color;
         line-height:  calc(24 / 14 * 100%);
+
+        @include _768 {
+           font-size: 24px;
+           color: $main-color;
+        }
+
+        @include _480 {
+            font-size: 24px;
+         }
     }
 
 }
