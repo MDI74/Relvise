@@ -28,7 +28,7 @@
         letter-spacing: 0.2px;
         line-height:  calc(30 / 20 * 100%);
         color: $second-color;
-        
+
         @include _480 {
             color: #4b4a4a
          }
@@ -79,7 +79,7 @@
             }
         }
 
-        @include _979 {
+        @include _992 {
             & img{
                 opacity: 0.5;
             }

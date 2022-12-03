@@ -15,14 +15,14 @@
         }
     }
 
-    &_item {
-
-    }
-
     &__link {
         font-weight: 600;
         color: $second-color;
         line-height:  calc(24 / 14 * 100%);
+
+        &:hover{
+            color: $main-color;
+        }
 
         @include _768 {
            font-size: 24px;

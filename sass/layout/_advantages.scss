@@ -1,0 +1,53 @@
+.advantages {
+    margin-top: 80px;
+
+    &__header {
+        margin-bottom: 50px;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -30px;
+        padding: 0px 15px;
+
+        @include _768{
+            flex-direction: column;
+        }
+    }
+
+    &__column {
+        padding: 0px 15px;
+        margin-bottom: 15px;
+        flex: 0 1 25%;
+
+        @include _992 {
+            flex: 0 1 50%;
+        }
+    }
+
+    &__item {
+        height: 100%;
+        background-color: #FFFFFF;
+        padding: 30px;
+        text-align: center;
+        font-weight: 700;
+    }
+}
+
+.item-advantages {
+    & > *:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    &__value {
+        font-size: 40px;
+        line-height:  calc(57 / 40 * 100%);
+    }
+    
+    &__text {
+        font-size: 16px;
+        color: $second-color;
+        line-height:  calc(24 / 16 * 100%);
+    }
+}

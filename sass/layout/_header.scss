@@ -1,12 +1,12 @@
 @use "sass:math";
 
 .header {
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 50;
-
+    
     &__menu {
         padding: 0 5px;
 
@@ -52,6 +52,7 @@
 
 .header__burger{
     display: none;
+    
     @include _768 {
         display: block;
         position: relative;

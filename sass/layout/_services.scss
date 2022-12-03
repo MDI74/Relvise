@@ -1,0 +1,77 @@
+.services {
+    position: relative;
+    z-index: 2;
+    margin-top: -111px;
+    
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px -15px;
+
+        @include _768{
+            flex-direction: column;
+            margin: 0px -15px;
+            row-gap: 5px;
+        }
+    }
+
+    &__column {
+        flex: 0 1 33.333%;
+        padding: 5px 15px;
+        
+        @include _992 {
+            flex: 0 1 50%;
+
+            &:last-child {
+                flex: 1 1 100%;
+            }
+        }
+    }
+
+    &__item {
+        height: 100%;
+        box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+        background-color: #FFFFFF;
+        padding: 35px;
+
+        .services & {
+            &:hover{
+                background-color: $dark-green;
+                color: #FFFFFF;
+                transition: all 0.2s ease-in;
+
+                .service-icon {
+                    fill: #FFFFFF;
+                }
+                
+                .item-service__title,            
+                .item-service__text {
+                    color: #FFFFFF ;      
+                }
+            }
+        }
+    }
+}
+
+.item-service {
+    & > *:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        color: $main-color;
+        line-height:  calc(32 / 24 * 100%);
+    }
+    
+    &__text {
+        color: $second-color;
+        line-height:  calc(20 / 14 * 100%);      
+    }
+}
+
+.service-icon {
+    fill: $dark-green;
+}
+
