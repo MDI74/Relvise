@@ -131,13 +131,13 @@ legend {
         position: fixed;
         top: 0;
         left: 100%;
-        width: 100%;
+        width: 45%;
         height: 100%;
         transition: all 0.3s ease-in;
         padding: 70px 0px 0px 0px;
-        background-color: #c3c8ca; }
+        background-color: #dce1e4; }
         .header__menu.active {
-          left: 0; } }
+          left: 55%; } }
   .header__content {
     display: flex;
     align-items: center;

@@ -14,14 +14,13 @@
             position: fixed;
             top: 0;
             left: 100%;
-            width: 100%;
+            width: 45%;
             height: 100%;
             transition: all 0.3s ease-in;
             padding: 70px 0px 0px 0px;
-            background-color: rgb(195, 200, 202);
-
+            background-color: rgb(220, 225, 228);
             &.active{
-                left: 0;
+                left: 55%;
             }
         }
     }
