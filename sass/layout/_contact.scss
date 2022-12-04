@@ -1,0 +1,130 @@
+.contact {
+    margin: 80px 0px 335px 0px;
+
+    &__header {
+        margin: 0px 0px 135px 0px;
+
+        @include _1170{
+            margin: 0px 0px 75px 0px;
+        }
+    
+        @include _768{
+            margin: 0px 0px 50px 0px;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0px 30px;
+        height: 410px;
+    
+        @include _768{
+            flex-direction: column;
+            align-items: unset;
+            height: unset;
+        }
+    
+        @include _480{
+            margin: 0px -15px;
+        }
+    }
+    
+    &__column {
+        flex: 0 1 33.333%;
+        cursor: pointer;
+    
+        @include _992{
+            flex: 0 1 50%;
+    
+            &:last-child{
+                flex: 1 1 100%;
+            }
+        }
+    }
+}
+
+.item-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #FFFFFF;;
+    padding: 50px 30px;
+    transition: all 0.2s ease-in;
+
+    & > *:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    &.active {
+        color: #FFFFFF;
+        background-color: $main-color;
+        padding: 80px 40px;
+        transition: all 0.2s ease-in;
+
+        @include _992{
+            padding: 50px 40px;
+        }
+    }
+
+    &__icon {
+        fill: $dark-green;
+        
+        .item-contact.active &{
+            fill: #FFFFFF;
+        }
+    }
+
+    &__emails{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+    
+    &__email{
+        color: inherit;
+        font-weight: 600;
+        font-size: 16px;
+        line-height:  calc(24 / 14 * 100%);
+    
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    
+    &__label {
+        font-weight: 700;
+        font-size: 16px;
+        line-height:  calc(24 / 16 * 100%);
+    }
+    
+    &__button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-weight: 600;
+        border: 1px solid #FF7B47;
+        color: #FF7B47;
+        border-radius: 5px;
+        letter-spacing: 0.2px;
+        line-height:  calc(24 / 14 * 100%);
+        transition: all 0.2s ease-in;
+    
+        &:hover{
+            background-color: #FF7B47;
+            color: #FFFFFF;
+        }
+    
+        .item-contact.active &{
+            border: 1px solid #FFFFFF;
+            color: #FFFFFF;
+    
+            &:hover{
+                border: 1px solid #FF7B47;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,25 @@
+.clients {
+    padding: 58px 0;
+    margin-bottom: 20px;
+
+    @include _600  {
+        padding: 20px 0; 
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap; 
+        align-items: center;
+        justify-content: center;
+    }
+    
+    &__item {
+        padding: 8px 15px;
+        flex: 0 1 16.6667%;
+        text-align: center;
+    
+        @include _768  {
+            flex: 0 1 50%;  
+        }
+    }
+}
