@@ -1,0 +1,55 @@
+.agency {
+    margin: 94px 0px 0px 0px;
+    background-color: #FFFFFF;
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0px;
+        @include _768{
+            display: unset; 
+        }
+    }
+
+    &__content {
+        padding-right: 20px;
+        
+        & > *:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    
+        @include _768{
+            margin-bottom: 20px; 
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height:  calc(32 / 24 * 100%); 
+    }
+
+    &__text {
+        color: $second-color;
+        line-height:  calc(20 / 24 * 100%); 
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 58px;
+        padding: 5px 40px;
+        font-weight: 700;
+        line-height:  calc(28 / 14 * 100%);
+        color: #FFFFFF;
+        background: #FF7B47;
+        border-radius: 5px;
+
+        &:hover {
+            background: #ec6029;
+        }
+    }
+}

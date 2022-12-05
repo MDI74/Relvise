@@ -84,6 +84,10 @@
         border-radius: 0px 5px 5px 0px;
         padding: 15px 23px;
         line-height: calc(28 / 14 * 100%);
+
+        &:hover {
+            background: #ec6029;
+        }
     
         @include _480 {
             padding: 15px 15px;

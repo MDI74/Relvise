@@ -49,11 +49,17 @@
         display: inline-block;
         text-align: center;
         color: #FFFFFF;
-        background: #FF7B47;
+        background-color: #FF7B47;
         border-radius: 37px;
         padding: 10px 36px;
         font-weight: 700;
         line-height: calc(28 / 14 * 100%);
+        transition: all 0.2s ease-in;
+
+        &:hover{
+            background-color: #FFFFFF;
+            color: #FF7B47;
+        }
 
         @include _480 {
             flex: 1 1 auto;
@@ -64,6 +70,12 @@
         color: $dark-green;
         border: 1px solid $dark-green;
         background: unset;
+        transition: all 0.2s ease-in;
+
+        &:hover{
+            background: $dark-green;
+            color: #FFFFFF;
+        }
     }
 
     &__image {
@@ -83,8 +95,6 @@
             & img{
                 opacity: 0.5;
             }
-        }
-      
+        } 
     }
-
 }

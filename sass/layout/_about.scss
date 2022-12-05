@@ -31,8 +31,7 @@
             height: 100%;
             top: 0;
             left: 0;
-            object-fit: cover;
-            
+            object-fit: cover;  
         }
 
         @include _992 {
@@ -51,7 +50,6 @@
         @include _992 {
             padding: 0px;
         }
-
     }
     
     &__title {
@@ -62,8 +60,7 @@
 
         @include _992 {
             font-size: 30px;
-        }
-        
+        } 
     }
     
     &__text {

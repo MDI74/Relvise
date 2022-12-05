@@ -13,16 +13,16 @@ body{
     flex-direction: column;
 }
 
+main {
+    flex: 1 1 auto;
+}
+
 ._container {
     max-width: 1076px;
     margin: 0 auto;
     padding: 0px 15px;
     display: flex;
     flex-direction: column;
-}
-
-main {
-    flex: 1 1 auto;
 }
 
 ._ibg {

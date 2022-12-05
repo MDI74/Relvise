@@ -1,8 +1,8 @@
 .contact {
-    margin: 80px 0px 335px 0px;
+    margin: 80px 0px 74px 0px;
 
     &__header {
-        margin: 0px 0px 135px 0px;
+        margin: 0px 0px 80px 0px;
 
         @include _1170{
             margin: 0px 0px 75px 0px;
@@ -18,12 +18,10 @@
         flex-wrap: wrap;
         align-items: center;
         margin: 0px 30px;
-        height: 410px;
     
         @include _768{
             flex-direction: column;
             align-items: unset;
-            height: unset;
         }
     
         @include _480{
@@ -35,10 +33,10 @@
         flex: 0 1 33.333%;
         cursor: pointer;
     
-        @include _992{
+        @include _1170{
             flex: 0 1 50%;
     
-            &:last-child{
+            &:last-child {
                 flex: 1 1 100%;
             }
         }
@@ -65,7 +63,7 @@
         padding: 80px 40px;
         transition: all 0.2s ease-in;
 
-        @include _992{
+        @include _1170 {
             padding: 50px 40px;
         }
     }
@@ -84,7 +82,7 @@
        align-items: center;
     }
     
-    &__email{
+    &__email {
         color: inherit;
         font-weight: 600;
         font-size: 16px;
@@ -126,5 +124,4 @@
             }
         }
     }
-
 }

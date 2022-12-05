@@ -1,3 +1,124 @@
-.footer{
+.footer {
+
+    &__top {
+        background-color: #17213C;
+        padding: 30px 0px;
+    }
     
+    &__body{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px -15px;
+    }
+    
+    &__column {
+        padding: 20px 15px;
+        flex: 0 1 16.6667%;
+    
+        &:last-child {
+            flex: 0 1 33.3334%;
+        }
+        
+        @include _992{
+            flex: 0 1 25%;
+    
+            &:last-child {
+                flex: 1 1 100%;
+            }
+        }
+    
+        @include _700{
+            flex: 0 1 50%;
+        }
+    }
+    
+    &__label {
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 16px;
+        line-height:  calc(24 / 16 * 100%);
+        margin-bottom: 20px;
+    }
+
+    &__copyright {
+        color: $second-color;
+        font-weight: 600;
+        padding-bottom: 10px;
+        line-height:  calc(24 / 14 * 100%);
+    
+    }
+}
+
+.menu-footer__item {
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.menu-footer__link {
+    color: #FFFFFF;
+    letter-spacing: 0.2px;
+    line-height:  calc(24 / 14 * 100%);
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+
+.contacts-footer {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        min-height: 30px;
+        color: #FFFFFF;
+        line-height:  calc(24 / 14 * 100%);
+        padding-left: 34px;
+    
+    
+        &:hover {
+            text-decoration: underline;
+        }
+    
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+    
+    &__item_phone {
+        background: url("./../img/footer/01.svg") left no-repeat;
+    }
+    
+    &__item_map {
+        background: url("./../img/footer/02.svg") left no-repeat;
+    }
+    
+    &__item_email{
+        background: url("./../img/footer/03.svg") left no-repeat;
+    }
+}
+
+.footer__bottom {
+    padding: 25px 0px;
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        @include _768 {
+            text-align: center;
+            flex-direction: column;
+        }
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
 }
